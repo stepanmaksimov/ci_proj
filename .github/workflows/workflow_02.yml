@@ -1,0 +1,17 @@
+name: workflow_02
+on: [repository_dispatch]
+jobs:
+  run_program:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: 
+          repository: MrSmid/ci_proj
+          ref: master
+          
+      - name: Install python dependencies
+        run: python -m pip install selenium
+        
+      - name: Run
+        run: python src/test.py
