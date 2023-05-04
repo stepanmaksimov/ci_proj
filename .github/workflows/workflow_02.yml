@@ -7,7 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with: 
-          repository: MrSmid/ci_proj
+          repository: stepanmaksimov/ci_proj
           ref: master
           
       - name: Install python dependencies
